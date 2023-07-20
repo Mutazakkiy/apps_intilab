@@ -123,7 +123,9 @@
                   <h6 class="text-back mt-1">Kalkulator Debit</h6>
                </div>
             </div>
-            <div class="col-4" hidden>
+         </div>
+         <div class="row px-1 mt-1">
+            <div class="col-4">
                <div class="box-item">
                   <a href="<?= base_url; ?>/getaranling">
                      <div class="itemm">
@@ -137,8 +139,6 @@
                   <h6 class="text-back mt-1">Getaran Lingkungan</h6>
                </div>
             </div>
-         </div>
-         <div class="row px-1 mt-1">
             <div class="col-4" hidden>
                <div class="box-item">
                   <a href="<?= base_url; ?>/getaranpersonal">
@@ -169,6 +169,8 @@
                      Kerja(Panas)</h6>
                </div>
             </div>
+         </div>
+         <div class="row px-1 mt-1">
             <div class="col-4" hidden>
                <div class="box-item">
                   <a href="./iklimDingin">
@@ -184,8 +186,6 @@
                      Kerja(Dingin)</h6>
                </div>
             </div>
-         </div>
-         <div class="row px-1 mt-1">
             <div class="col-4" hidden>
                <div class="box-item">
                   <a href="./partikulat">
@@ -214,6 +214,8 @@
                   <h6 class="text-back mt-1">Listrik & Magnet</h6>
                </div>
             </div>
+         </div>
+         <div class="row px-1 mt-1" hidden>
             <div class="col-4" hidden>
                <div class="box-item">
                   <a href="./sinarUV">
@@ -228,8 +230,6 @@
                   <h6 class="text-back mt-1">Sinar UV</h6>
                </div>
             </div>
-         </div>
-         <div class="row px-1 mt-1" hidden>
             <div class="col-4">
                <div class="box-item">
                   <a href="./direct">
@@ -258,6 +258,8 @@
                   <h6 class="text-back mt-1">Kebisingan Personal</h6>
                </div>
             </div>
+         </div>
+         <div class="row px-1 mt-1" hidden>
             <div class="col-4">
                <div class="box-item">
                   <a href="./lingkunganHidup">
@@ -272,8 +274,6 @@
                   <h6 class="text-back mt-1">Lingkungan Hidup</h6>
                </div>
             </div>
-         </div>
-         <div class="row px-1 mt-1" hidden>
             <div class="col-4">
                <div class="box-item">
                   <a href="./lingkunganKerja">
@@ -302,6 +302,8 @@
                   <h6 class="text-back mt-1">Swab Test</h6>
                </div>
             </div>
+         </div>
+         <div class="row px-1 mt-1">
             <div class="col-4" hidden>
                <div class="box-item">
                   <a href="./microBio">
@@ -316,8 +318,6 @@
                   <h6 class="text-back mt-1">Microbiologi Udara</h6>
                </div>
             </div>
-         </div>
-         <div class="row px-1 mt-1">
             <div class="col-4" hidden>
                <div class="box-item">
                   <a href="./emisiCerobong">
@@ -346,7 +346,7 @@
                   <h6 class="text-back mt-1">Partikulat Isokinetik</h6>
                </div>
             </div>
-            
+
          </div>
          <!-- * Wallet Footer -->
          <div class="mb-3"></div>
@@ -354,20 +354,20 @@
    </div>
 
    <script>
-      $(document).ready(function(){
-         $.ajax({
-            url: '<?= base_url; ?>/emisi/getregulasi',
-            success: function(e) {
-               e = JSON.parse(e)
-               if(e.length == 0){
-                  Swal.fire({
-                     icon : 'info',
-                     title : 'Ooooops....',
-                     text : 'Regulasi Belum Terdownload Silahkan Lakukan Sync Regulasi Pada Ikon Hamburger',
-                     timer : 3000
-                  })
-               }
+   $(document).ready(function() {
+      $.ajax({
+         url: '<?= base_url; ?>/emisi/getregulasi',
+         success: function(e) {
+            e = JSON.parse(e)
+            if (e.length == 0) {
+               Swal.fire({
+                  icon: 'info',
+                  title: 'Ooooops....',
+                  text: 'Regulasi Belum Terdownload Silahkan Lakukan Sync Regulasi Pada Ikon Hamburger',
+                  timer: 3000
+               })
             }
-         })
+         }
       })
+   })
    </script>
